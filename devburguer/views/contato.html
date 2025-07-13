@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Contatos</title>
+</head>
+
+<body>
+    <h1 id="title">DevBurger</h1>
+
+    <div class="entrar-contato">
+        <h2>Digite seu contato:</h2>
+        <form id="formContato" method="POST" action="/contato">
+            <label for="nome">Nome</label><br>
+            <input type="text" id="nome" name="nome" required><br><br>
+
+            <label for="email">Email</label><br>
+            <textarea id="email" name="email" rows="2" required></textarea><br><br>
+
+            <label for="assunto">Assunto</label><br>
+            <textarea id="assunto" name="assunto" rows="2" required></textarea><br><br>
+
+            <label for="mensagem">Mensagem</label><br>
+            <textarea id="mensagem" name="mensagem" rows="4" required></textarea><br><br>
+
+            <div>
+                <button class="btn">Enviar mensagem</button>
+            </div>
+        </form>
+        <div id="msgResposta" style="margin-top:10px;"></div>
+    </div>
+
+    <button class="btn center" onclick="window.location.href='/'">Voltar para o cardápio</button>
+</body>
+
+</html>

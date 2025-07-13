@@ -1,0 +1,67 @@
+body {
+    align-items: center;
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#title {
+    color: rgb(255, 94, 0);
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#cardapio, #contatos, #sugest {
+    text-align: center;
+    border: 3px solid white;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+
+#cardapio hr {
+    width: 30%;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    width: 50%;
+    margin: auto;
+}
+
+#sugestao-lanche, .entrar-contato {
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.left {
+    display: block;
+    text-align: left;
+}
+
+li {
+    list-style-type: none;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    margin: auto;
+}

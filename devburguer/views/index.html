@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>DevBurguer</title>
+</head>
+
+<body>
+    <h1 id="title">DevBurger</h1>
+    <div class="text">
+        <p>Releve o CSS :)</p>
+        <p>A DevBurguer é uma iniciativa inovadora que une tecnologia e gastronomia, oferecendo uma experiência única
+            para amantes de hambúrgueres artesanais e entusiastas do mundo digital. Com foco na qualidade dos
+            ingredientes e na praticidade do atendimento, a DevBurguer se destaca por utilizar soluções tecnológicas
+            para facilitar pedidos, personalização dos sabores e agilidade na entrega, criando uma conexão especial
+            entre o sabor e a inovação.</p>
+    </div>
+    <div id="cardapio">
+        <h1>Cardápio DevBurger</h1>
+    </div>
+    <script>
+        fetch('/api/lanches')
+            .then(res => res.json())
+            .then(data => {
+                const lanches = data.lanches || data;
+                const container = document.getElementById('cardapio');
+                lanches.forEach(lanche => {
+                    const item = document.createElement('div');
+                    item.innerHTML = `
+                        <h2 class="lanche">${lanche.nome}</h2>
+                        <p><b>Ingredientes:</b> ${lanche.ingredientes.join(', ')}</p>
+                        <p><b>Preço:</b> R$ ${lanche.valor.toFixed(2)}</p>
+                        <hr>
+                    `;
+                    container.appendChild(item);
+                });
+            })
+            .catch(err => {
+                document.getElementById('cardapio').innerText = 'Erro ao carregar o cardápio.';
+                console.error(err);
+            });
+
+    </script>
+
+    <div id="sugestao-lanche">
+        <h2>Sugira um novo lanche</h2>
+        <form id="formSugestao" method="GET" action="/sugestao">
+            <label for="nome">Nome do lanche:</label><br>
+            <input type="text" id="nome" name="nome" required><br><br>
+
+            <label for="ingredientes">Ingredientes (separados por vírgula):</label><br>
+            <textarea id="ingredientes" name="ingredientes" rows="3" required></textarea><br><br>
+
+            <div>
+                <button type="submit" class="btn">Enviar sugestão</button>
+                <button type="button" class="btn" onclick="window.location.href='/contato'">Entre em contato</button>
+            </div>
+        </form>
+        <div id="msgResposta" style="margin-top:10px;"></div>
+    </div>
+
+</body>
+
+</html>

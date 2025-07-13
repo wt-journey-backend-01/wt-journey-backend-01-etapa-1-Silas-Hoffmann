@@ -1,0 +1,103 @@
+{
+    "lanches": [
+        {
+            "id": 1,
+            "nome": "X-Burguer",
+            "valor": 16,
+            "ingredientes": [
+                "pão",
+                "hambúrguer",
+                "queijo",
+                "alface",
+                "tomate"
+            ]
+        },
+        {
+            "id": 2,
+            "nome": "X-Tudo",
+            "valor": 22,
+            "ingredientes": [
+                "pão",
+                "hambúrguer",
+                "queijo",
+                "bacon",
+                "calabresa",
+                "ovo",
+                "batata palha",
+                "alface",
+                "tomate"
+            ]
+        },
+        {
+            "id": 3,
+            "nome": "X-Calabresa",
+            "valor": 18,
+            "ingredientes": [
+                "pão",
+                "hambúrguer",
+                "calabresa",
+                "queijo",
+                "alface",
+                "tomate"
+            ]
+        },
+        {
+            "id": 4,
+            "nome": "X-Salada",
+            "valor": 16,
+            "ingredientes": [
+                "pão",
+                "hambúrguer",
+                "queijo",
+                "alface",
+                "tomate"
+            ]
+        }
+    ],
+    "sugestoes": [
+        {
+            "nome": "Hamburguer",
+            "ingredientes": [
+                "pão",
+                "alface",
+                "queijo",
+                "hamburguer"
+            ]
+        },
+        {
+            "nome": "X-Picanha",
+            "ingredientes": [
+                "pao",
+                "picanha",
+                "queijo",
+                "alface"
+            ]
+        },
+        {
+            "nome": "fjh,hvj",
+            "ingredientes": [
+                "tkmgdhkmgh"
+            ]
+        }
+    ],
+    "cliente-contatos": [
+        {
+            "nome": "Silas",
+            "email": "teste@email.com",
+            "assunto": "Teste",
+            "mensagem": "Olá ChatGPT"
+        },
+        {
+            "nome": "Silas",
+            "email": "teste@email.com",
+            "assunto": "Teste",
+            "mensagem": "Olá ChatGPT"
+        },
+        {
+            "nome": "Silas",
+            "email": "teste@email.com",
+            "assunto": "Teste",
+            "mensagem": "Olá ChatGPT"
+        }
+    ]
+}
